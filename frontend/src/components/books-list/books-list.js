@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { React, useState, useEffect } from "react"
 import { Link as RouterLink } from "react-router-dom"
 import {
     Button,
@@ -59,7 +59,7 @@ export const BooksList = () => {
     return (
         <>
             <div className={`${classes.pageHeader} ${classes.mb2}`}>
-                <Typography variant="h5">Book List</Typography>
+                <Typography variant="h5">Book List 📚</Typography>
                 {isAdmin && (
                     <Button variant="contained" color="primary" component={RouterLink} to="/admin/books/add">
                         Add Book
@@ -73,13 +73,13 @@ export const BooksList = () => {
                             <Table stickyHeader>
                                 <TableHead>
                                     <TableRow>
-                                        <TableCell>Name</TableCell>
-                                        <TableCell align="right">ISBN</TableCell>
-                                        <TableCell>Category</TableCell>
-                                        <TableCell align="right">Quantity</TableCell>
-                                        <TableCell align="right">Available</TableCell>
-                                        <TableCell align="right">Price</TableCell>
-                                        <TableCell>Action</TableCell>
+                                        <TableCell>Name 📛</TableCell>
+                                        <TableCell align="right">ISBN 🔢</TableCell>
+                                        <TableCell>Category 🧺</TableCell>
+                                        <TableCell align="right">Quantity 🐂</TableCell>
+                                        <TableCell align="right">Available 😎</TableCell>
+                                        <TableCell align="right">Price 🤑</TableCell>
+                                        <TableCell>Action 🤪</TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
@@ -166,14 +166,14 @@ export const BooksList = () => {
                     </div>
                 </>
             ) : (
-                <Typography variant="h5">No books found!</Typography>
+                <Typography variant="h5">No books found! 😥</Typography>
             )}
 
             {
                 user && !isAdmin && (
                     <>
                         <div className={`${classes.pageHeader} ${classes.mb2}`}>
-                            <Typography variant="h5">Borrowed Books</Typography>
+                            <Typography variant="h5">Borrowed Books 😗</Typography>
                         </div>
                         {borrowedBook.length > 0 ? (
                             <>
@@ -182,10 +182,10 @@ export const BooksList = () => {
                                         <Table stickyHeader>
                                             <TableHead>
                                                 <TableRow>
-                                                    <TableCell>Name</TableCell>
-                                                    <TableCell align="right">ISBN</TableCell>
-                                                    <TableCell>Category</TableCell>
-                                                    <TableCell align="right">Price</TableCell>
+                                                    <TableCell>Name 📛</TableCell>
+                                                    <TableCell align="right">ISBN 🔢</TableCell>
+                                                    <TableCell>Category 🧺</TableCell>
+                                                    <TableCell align="right">Price 🤑</TableCell>
                                                     <TableCell></TableCell>
                                                 </TableRow>
                                             </TableHead>
@@ -218,7 +218,7 @@ export const BooksList = () => {
                                 </div>
                             </>
                         ) : (
-                            <Typography variant="h5">No books issued!</Typography>
+                            <Typography variant="h5">No books issued! 😥</Typography>
                         )}
                     </>
                 )
