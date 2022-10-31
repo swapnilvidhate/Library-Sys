@@ -1,7 +1,7 @@
-import Highcharts from "highcharts"
-import HighchartsReact from "highcharts-react-official"
-import { useEffect, useState } from "react"
-import { useParams, useNavigate, Link as RouterLink } from "react-router-dom"
+import Highcharts from "highcharts";
+import HighchartsReact from "highcharts-react-official";
+import { React, useEffect, useState } from "react";
+import { useParams, useNavigate, Link as RouterLink } from "react-router-dom";
 import {
     Button,
     Card,
@@ -14,13 +14,13 @@ import {
     TableBody,
     TableCell,
     TableRow,
-} from "@mui/material"
-import { NotificationManager } from "react-notifications"
-import { BackendApi } from "../../client/backend-api"
-import { useUser } from "../../context/user-context"
-import { TabPanel } from "../tabs/tab"
-import { makeChartOptions } from "./chart-options"
-import classes from "./styles.module.css"
+} from "@mui/material";
+import { NotificationManager } from "react-notifications";
+import { BackendApi } from "../../client/backend-api";
+import { useUser } from "../../context/user-context";
+import { TabPanel } from "../tabs/tab";
+import { makeChartOptions } from "./chart-options";
+import classes from "./styles.module.css";
 
 export const Book = () => {
     const { bookIsbn } = useParams()
@@ -80,7 +80,7 @@ export const Book = () => {
         book && (
             <div className={classes.wrapper}>
                 <Typography variant="h5" align="center" style={{ marginBottom: 20 }}>
-                    Book Details
+                    Book Details 📔
                 </Typography>
                 <Card>
                     <Tabs
@@ -111,37 +111,37 @@ export const Book = () => {
                                 <TableBody>
                                     <TableRow>
                                         <TableCell variant="head" component="th" width="200">
-                                            Name
+                                            Name 📛
                                         </TableCell>
                                         <TableCell>{book.name}</TableCell>
                                     </TableRow>
                                     <TableRow>
                                         <TableCell variant="head" component="th">
-                                            ISBN
+                                            ISBN 🔢
                                         </TableCell>
                                         <TableCell>{book.isbn}</TableCell>
                                     </TableRow>
                                     <TableRow>
                                         <TableCell variant="head" component="th">
-                                            Category
+                                            Category 🧺
                                         </TableCell>
                                         <TableCell>{book.category}</TableCell>
                                     </TableRow>
                                     <TableRow>
                                         <TableCell variant="head" component="th">
-                                            Quantity
+                                            Quantity 🐂
                                         </TableCell>
                                         <TableCell>{book.quantity}</TableCell>
                                     </TableRow>
                                     <TableRow>
                                         <TableCell variant="head" component="th">
-                                            Available
+                                            Available 😎
                                         </TableCell>
                                         <TableCell>{book.availableQuantity}</TableCell>
                                     </TableRow>
                                     <TableRow>
                                         <TableCell variant="head" component="th">
-                                            Price
+                                            Price 🤑
                                         </TableCell>
                                         <TableCell>${book.price}</TableCell>
                                     </TableRow>
